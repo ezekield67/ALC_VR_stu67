@@ -1,6 +1,6 @@
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
@@ -12,7 +12,7 @@
       <a-plane src="#grass" repeat="40 15" position="1.5 -6.3 0"  rotation="-90 0 0" height="15" width="40"></a-plane>
       <a-sky src="#360img" color="#04C0F4"></a-sky>
       
-      </a-entity>
+     
 
       <a-entity position="0 0 0">
       <a-box position="0.05 0.5 -3" rotation="0 45 0" color="#D12B56"></a-box>
@@ -54,7 +54,7 @@
         <a-box src="#bark" repeat="1 1" position="0 1 0" color="#756a3b" scale="0.2 1 0.2"></a-box>
       </a-entity>
       <a-entity>
-      <a-cylinder color="#E3DAC9" position="1 50 1" height="3" radius="1.5"></a-cylinder>
+      <a-cylinder color="#E3DAC9" position="1 50 1" rotation="0 0 0" height="3" radius="1.5"></a-cylinder>
       <a-cylinder color="#E3DAC9" position="3 50 1" height="3" radius="1.5"></a-cylinder>
       <a-cylinder color="#E3DAC9" position="5 50 1" height="3" radius="1.5"></a-cylinder>
       <a-cylinder color="#E3DAC9" position="7 50 1" height="3" radius="1.5"></a-cylinder>
@@ -66,17 +66,17 @@
       <a-cylinder color="#E3DAC9" position="19 50 1" height="3" radius="1.5"></a-cylinder>
       <a-cylinder color="#E3DAC9" position="21 50 1" height="3" radius="1.5"></a-cylinder>
       
-      <a-cylinder color="#E3DAC9" position="-1 50 1" height="3" radius="1.5"></a-cylinder>
-      <a-cylinder color="#E3DAC9" position="-3 49 1" height="3" radius="1.5"></a-cylinder>
-      <a-cylinder color="#E3DAC9" position="-5 48 1" height="3" radius="1.5"></a-cylinder>
-      <a-cylinder color="#E3DAC9" position="-7 46.5 1" height="3" radius="1.5"></a-cylinder>
-      <a-cylinder color="#E3DAC9" position="-9 45 1" height="3" radius="1.5"></a-cylinder>
-      <a-cylinder color="#E3DAC9" position="-11 43.5 1" height="3" radius="1.5"></a-cylinder>
-      <a-cylinder color="#E3DAC9" position="-13 41.5 1" height="3" radius="1.5"></a-cylinder>
-      <a-cylinder color="#E3DAC9" position="-15 39.5 1" height="3" radius="1.5"></a-cylinder>
-      <a-cylinder color="#E3DAC9" position="-17 37.5 1" height="3" radius="1.5"></a-cylinder>
-      <a-cylinder color="#E3DAC9" position="-19 35.5 1" height="3" radius="1.5"></a-cylinder>
-      <a-cylinder color="#E3DAC9" position="-21 33 1" height="3" radius="1.5"></a-cylinder>
+      <a-cylinder color="#E3DAC9" position="-1 50 1" rotation="0 0 0"height="3" radius="1.5"></a-cylinder>
+      <a-cylinder color="#E3DAC9" position="-3 49 1" rotation="0 0 135"height="3" radius="1.5"></a-cylinder>
+      <a-cylinder color="#E3DAC9" position="-5 48 1" rotation="0 0 135"height="3" radius="1.5"></a-cylinder>
+      <a-cylinder color="#E3DAC9" position="-7 46.5 1" rotation="0 0 135"height="3" radius="1.5"></a-cylinder>
+      <a-cylinder color="#E3DAC9" position="-9 45 1" rotation="0 0 135"height="3" radius="1.5"></a-cylinder>
+      <a-cylinder color="#E3DAC9" position="-11 43.5 1" rotation="0 0 135"height="3" radius="1.5"></a-cylinder>
+      <a-cylinder color="#E3DAC9" position="-13 41.5 1" rotation="0 0 135"height="3" radius="1.5"></a-cylinder>
+      <a-cylinder color="#E3DAC9" position="-15 39.5 1" rotation="0 0 135"height="3" radius="1.5"></a-cylinder>
+      <a-cylinder color="#E3DAC9" position="-17 37.5 1" rotation="0 0 135"height="3" radius="1.5"></a-cylinder>
+      <a-cylinder color="#E3DAC9" position="-19 35.5 1" rotation="0 0 135"height="3" radius="1.5"></a-cylinder>
+      <a-cylinder color="#E3DAC9" position="-21 33 1" rotation="0 0 135"height="3" radius="1.5"></a-cylinder>
       
       <a-cylinder color="#E3DAC9" position="23 50 1" height="3" radius="1.5"></a-cylinder>
       <a-cylinder color="#E3DAC9" position="25 49 1" height="3" radius="1.5"></a-cylinder>
@@ -202,8 +202,18 @@
       <a-cylinder color="#E3DAC9" position="43 33 1" height="3" radius="1.5"></a-cylinder>
       </a-entity>
     
-      <a-box position="1 1 -10"></a-box>
-
+      <a-box position="1 1 -10" color="red">
+        <a-animation attribute="visible" to="false" begin="click"></a-animation>
+      </a-box>
+      <a-box position="1 1 -10" color="green">
+        <a-animation attribute="color" from="green" to="yellow" begin="mouseenter"></a-animation>
+        <a-animation attribute="color" from="yellow" to="green" begin="mouseselect"></a-animation>
+      </a-box>
+      <a-text value="This is a WebVR demo"></a-text>
+      <a-enity camera look-controls postion="0 1.6 0">
+       <a-cursor color="cyan">
+       </a-cursor>
+     </a-enity>
     </a-scene>
   </body>
 </html>
